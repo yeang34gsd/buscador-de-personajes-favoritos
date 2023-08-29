@@ -252,7 +252,6 @@ const personajes = [
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/50/87/90/5087904e83ac842fda8cb6bbc9916a50.jpg" },
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/15/2e/0f/152e0f38e08190ce590b1d7dbcecf074.jpg" },
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/8c/48/b2/8c48b2f20706719924bc3066428feca0.jpg" },
-  { nombre: "shadman nos profano", imagen:"https://photos.xgroovy.com/contents/albums/main/420x999/120000/120534/116234.jpg " },
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/09/4e/2e/094e2eed459d2835e2f9d3287ed0cf0e.jpg " },
   { nombre: "shadman nos profano", imagen: " https://i.pinimg.com/236x/e4/7b/77/e47b77b0a118c4f0b85830188d35fd03.jpg " },
   { nombre: "shadman nos profano", imagen: " https://i.pinimg.com/236x/05/1a/60/051a6034defc026f8779bff542b5a23e.jpg " },
@@ -274,7 +273,7 @@ const personajes = [
   { nombre: "shadman nos profano", imagen: "https://verhentai.org/wp-content/uploads/2019/02/gravity-fall-wendy-1.jpg" },
   { nombre: "shadman nos profano", imagen: "https://verhentai.org/wp-content/uploads/2019/02/hentai-amiga-joven.jpg" },
   { nombre: "shadman nos profano", imagen: "https://verhentai.org/wp-content/uploads/2019/02/hentai-colegial.jpg" },
-  { nombre: "shadman nos profano", imagen: "https://comicsporno.xxx/wp-content/uploads/Scarlet-Witch-%E2%80%93-Xmen.jpg"}, 
+  { nombre: "shadman nos profano", imagen: "https://comicsporno.xxx/wp-content/uploads/Scarlet-Witch-%E2%80%93Xmen.jpg"}, 
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/01/3b/7f/013b7f7ac750c768d16c06de07b07366.jpg " },
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/83/a3/dc/83a3dce1bc8cf3a0f18cc0892a62dffd.jpg " },
   { nombre: "shadman nos profano", imagen: "https://i.pinimg.com/236x/ff/88/2b/ff882b2805baf3a4cadc35409181593b.jpg" },
@@ -474,11 +473,12 @@ const personajes = [
 { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/9f/ea/07/9fea07fcff0c793554f91a841c9901f3.jpg " },
 
 
-{ nombre: " sudio", imagen: " " },
 
-{ nombre: " sudio", imagen: " " },
 
+
+  
 ];
+
 
 function search() {
   const searchInput = document.getElementById("searchInput").value.toLowerCase();
@@ -495,9 +495,43 @@ function search() {
     imgElement.src = personaje.imagen;
     imgElement.alt = personaje.nombre;
     imgElement.style.width = "6cm"; // Establece el ancho de la imagen en 6 centímetros
-    imgElement.style.height = "10cm"; // Establece la altura de la imagen en 6 centímetros
-
-    linkElement.appendChild(imgElement);
-    gallery.appendChild(linkElement);
+    imgElement.style.height = "10cm"; // Establece la altura de la imagen en 10 centímetros
+linkElement.appendChild(imgElement); gallery. appendChild(enlaceElemento)
   });
 }
+
+
+ // Función para aumentar el contador de likes y guardar en localStorage
+function incrementarContador(btn) {
+  var contador = btn.nextElementSibling;
+
+  // Obtener los likes almacenados en localStorage o inicializar a cero si no existen
+  var likes = JSON.parse(localStorage.getItem("likes")) || { count: 0 };
+
+  if (!btn.disabled) { // Permitir clics solo si el botón no está deshabilitado
+    contador.textContent = parseInt(contador.textContent) + 1;
+    btn.disabled = true; // Deshabilitar botón después del primer clic
+
+    // Actualizar el contador en el objeto de likes y guardar en localStorage
+    likes.count++;
+    localStorage.setItem("likes", JSON.stringify(likes));
+  }
+}
+
+// Verificar si el navegador soporta localStorage
+if (typeof(Storage) !== "undefined") {
+  // Comprobar si ya hay likes almacenados en localStorage
+  if (localStorage.likes) {
+    // Si hay likes almacenados, obtenerlos y mostrarlos
+    const likes = JSON.parse(localStorage.likes);
+    document.getElementById("mi-boton").nextElementSibling.textContent = likes.count;
+  }
+} else {
+  // El navegador no soporta localStorage, mostrar un mensaje de error
+  console.log("Tu navegador no soporta localStorage. No se pueden guardar los likes.");
+}
+
+document.querySelector('#mi-boton').addEventListener('click', function() {
+  incrementarContador(this);
+});
+
