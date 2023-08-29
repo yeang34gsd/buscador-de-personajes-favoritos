@@ -1,0 +1,85 @@
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para la galería de wallpapers */
+#wallpapers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.wallpaper {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1m solid #ffffff;
+}
+
+/* Estilo para el logotipo circular de 250x100 px */
+.logo-circular {
+  width: 140px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Estilo para el logotipo horizontal de 400x100 px */
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circular,
+h1 {
+  margin-right: 10px;
+}
+
+.logo-horizontal {
+  width: 400px;
+  height: 100px;
+}
+
+/* Estilos para las imágenes con rectángulos y pulgar arriba */
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 1m; /* Espacio entre las imágenes y los rectángulos */
+}
+
+.rectangulo {
+  width: 200px;
+  height: 30px;
+  background-color: lightgray;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.like-btn {
+  font-size: 20px;
+}
+
+.contador {
+  font-size: 18px;
+}
