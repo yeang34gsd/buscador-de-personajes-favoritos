@@ -121,6 +121,33 @@
     margin: 1m;
   }
 </style>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <div class="menu-desplegable">
+        <button class="boton-categoria" onclick="mostrarCategorias()">Categorías</button>
+        <div class="opciones-categoria" id="categorias">
+            <a href="#" onclick="mostrarImagenes('anime')">Anime</a>
+            <a href="#" onclick="mostrarImagenes('autos')">Autos</a>
+            <a href="#" onclick="mostrarImagenes('artistas')"> Artistas</a>
+            <a href="#" onclick="mostrarImagenes('artistas')"> wallpaper 4k</a>
+            
+            <a href="#" onclick="mostrarImagenes('waifus')"> waifus </a>
+
+            <!-- Agrega más categorías según sea necesario -->
+        </div>
+    </div>
+    
+    <div id="galeria">
+        <!-- Aquí se cargarán las imágenes de la categoría seleccionada -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
 </body>
 </html>
