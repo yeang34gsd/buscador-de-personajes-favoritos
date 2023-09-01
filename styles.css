@@ -1,85 +1,146 @@
 /* Estilos globales */
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-}
-
-/* Estilos para el encabezado */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-input {
-  padding: 5px;
-  margin-right: 10px;
-}
-
-button {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-/* Estilos para la galería de wallpapers */
-#wallpapers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-.wallpaper {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1m solid #ffffff;
-}
-
-/* Estilo para el logotipo circular de 250x100 px */
-.logo-circular {
-  width: 140px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-/* Estilo para el logotipo horizontal de 400x100 px */
-header {
-  display: flex;
-  align-items: center;
-}
-
-.logo-circular,
-h1 {
-  margin-right: 10px;
-}
-
-.logo-horizontal {
-  width: 400px;
-  height: 100px;
-}
-
-/* Estilos para las imágenes con rectángulos y pulgar arriba */
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  /* Estilos para el encabezado */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para la galería de wallpapers */
+  #wallpapers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .wallpaper {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1m solid #ffffff;
+  }
+  
+  /* Estilo para el logotipo circular de 250x100 px */
+  .logo-circular {
+    width: 140px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  /* Estilo para el logotipo horizontal de 400x100 px */
+  header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-circular,
+  h1 {
+    margin-right: 10px;
+  }
+  
+  .logo-horizontal {
+    width: 400px;
+    height: 100px;
+  }
+  
+  /* Estilos para las imágenes con rectángulos y pulgar arriba */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin: 1m; /* Espacio entre las imágenes y los rectángulos */
+  }
+  /* Estilos para las imágenes con rectángulos y pulgar arriba */
 .image-container {
-  position: relative;
-  display: inline-block;
-  margin: 1m; /* Espacio entre las imágenes y los rectángulos */
+    position: relative;
+    display: inline-block;
+    margin: 4px; /* Cambiado a 10px para establecer un espacio de 10 píxeles */
 }
 
-.rectangulo {
-  width: 200px;
-  height: 30px;
-  background-color: lightgray;
-  margin-bottom: 10px;
-  padding: 10px;
+  
+
+
+
+
+
+
+/* Estilo para el botón de categoría */
+.boton-categoria {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Borde del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón por encima */
 }
 
-.like-btn {
-  font-size: 20px;
+/* Estilo para las opciones de categoría (inicialmente ocultas) */
+.opciones-categoria {
+    display: none; /* Oculta las opciones por defecto */
+    position: absolute; /* Posición absoluta para superponer */
+    background-color: white; /* Color de fondo del menú desplegable */
+    min-width: 160px; /* Ancho mínimo del menú desplegable */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Asegura que el menú desplegable esté encima de otros elementos */
 }
 
-.contador {
-  font-size: 18px;
+/* Estilo para los enlaces de categoría */
+.opciones-categoria a {
+    color: black; /* Color del texto de las opciones */
+    padding: 12px 16px; /* Espaciado interno de las opciones */
+    text-decoration: none; /* Quita subrayado de enlaces */
+    display: block; /* Muestra los enlaces como bloques para ocupar todo el ancho */
 }
+
+/* Estilo para los enlaces de categoría al pasar el ratón por encima */
+.opciones-categoria a:hover {
+    background-color: #f2f2f2; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor de las imágenes */
+#galeria {
+  display: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Alinia las imágenes a la izquierda */
+}
+
+/* Estilo para las imágenes */
+#galeria img {
+  width: 6cm;
+  height: 10cm;
+  margin-right: 10px; /* Espacio a la derecha de cada imagen */
+}
+
