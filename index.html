@@ -1065,14 +1065,15 @@ Por la presente se otorga permiso, sin cargo, a cualquier persona que obtenga un
     </style>
 </head>
 <body>
-    <!-- Botón para mostrar/ocultar comentarios -->
-    <button id="show-comments-button">Mostrar Comentarios</button>
-
     <!-- Contenedor para cargar los comentarios de Disqus -->
     <div id="disqus-comments" style="display: none; position: fixed; top: 10px; right: 10px; width: 400px; height: 100%; overflow-y: auto; background-color: white; z-index: 9999;">
-        <!-- El div con el ID "disqus_thread" debe estar presente en tu contenido, no aquí -->
-        <!-- Nos aseguramos de que el contenedor esté vacío al principio -->
+        <!-- Los comentarios de Disqus se cargarán aquí -->
+        <div id="disqus_thread"></div>
+        <noscript>Por favor, habilita JavaScript para ver los comentarios.</noscript>
     </div>
+
+    <!-- Botón para mostrar/ocultar comentarios -->
+    <button id="show-comments-button">Mostrar Comentarios</button>
 
     <script>
         // Función para mostrar/ocultar los comentarios cuando se hace clic en el botón
@@ -1085,16 +1086,6 @@ Por la presente se otorga permiso, sin cargo, a cualquier persona que obtenga un
                 disqusContainer.style.display = 'block';
                 commentsVisible = true;
                 showCommentsButton.innerText = 'Ocultar Comentarios';
-                // Carga los comentarios de Disqus cuando se muestran
-                if (typeof DISQUS !== 'undefined') {
-                    DISQUS.reset({
-                        reload: true,
-                        config: function () {
-                            this.page.identifier = 'unique_page_identifier';
-                            this.page.url = window.location.href;
-                        }
-                    });
-                }
             } else {
                 disqusContainer.style.display = 'none';
                 commentsVisible = false;
@@ -1104,5 +1095,6 @@ Por la presente se otorga permiso, sin cargo, a cualquier persona que obtenga un
     </script>
 </body>
 </html>
+
 
   
