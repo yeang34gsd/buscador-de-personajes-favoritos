@@ -1028,5 +1028,81 @@ Por la presente se otorga permiso, sin cargo, a cualquier persona que obtenga un
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadro de Comentarios de Disqus</title>
+    <!-- Agrega el código de Disqus en esta sección -->
+    <script>
+        var disqus_config = function () {
+            // Configuración de Disqus
+            this.page.url = window.location.href; // URL de la página
+            this.page.identifier = 'unique_page_identifier'; // Identificador único de la página
+        };
+    </script>
+    <script src="https://anime-bhwn0jvfo4.disqus.com/embed.js" async></script>
+    <style>
+        /* Estilos personalizados para el botón */
+        #show-comments-button {
+            position: fixed;
+            bottom: 10px; /* Ajusta la posición vertical según tus necesidades */
+            right: 10px;
+            z-index: 9999;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #show-comments-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón para mostrar/ocultar comentarios -->
+    <button id="show-comments-button">Mostrar Comentarios</button>
+
+    <!-- Contenedor para cargar los comentarios de Disqus -->
+    <div id="disqus-comments" style="display: none; position: fixed; top: 10px; right: 10px; width: 400px; height: 100%; overflow-y: auto; background-color: white; z-index: 9999;">
+        <!-- El div con el ID "disqus_thread" debe estar presente en tu contenido, no aquí -->
+        <!-- Nos aseguramos de que el contenedor esté vacío al principio -->
+    </div>
+
+    <script>
+        // Función para mostrar/ocultar los comentarios cuando se hace clic en el botón
+        var disqusContainer = document.getElementById('disqus-comments');
+        var showCommentsButton = document.getElementById('show-comments-button');
+        var commentsVisible = false;
+
+        showCommentsButton.addEventListener('click', function () {
+            if (!commentsVisible) {
+                disqusContainer.style.display = 'block';
+                commentsVisible = true;
+                showCommentsButton.innerText = 'Ocultar Comentarios';
+                // Carga los comentarios de Disqus cuando se muestran
+                if (typeof DISQUS !== 'undefined') {
+                    DISQUS.reset({
+                        reload: true,
+                        config: function () {
+                            this.page.identifier = 'unique_page_identifier';
+                            this.page.url = window.location.href;
+                        }
+                    });
+                }
+            } else {
+                disqusContainer.style.display = 'none';
+                commentsVisible = false;
+                showCommentsButton.innerText = 'Mostrar Comentarios';
+            }
+        });
+    </script>
+</body>
+</html>
 
   
