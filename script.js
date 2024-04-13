@@ -14,6 +14,11 @@ const personajes = [
   { nombre: "Goku", imagen: "  https://i.pinimg.com/236x/56/e9/eb/56e9eb3cdb111068d3ec30afee07d276.jpg " },
   { nombre: "Goku", imagen: "  https://i.pinimg.com/236x/76/8c/e5/768ce5a2a335ccfd8a60ccd25e52c948.jpg " },
   { nombre: "Goku", imagen: "  https://i.pinimg.com/236x/14/61/4c/14614cd9808466b29cdeb5257ee80f99.jpg " },
+
+
+
+
+  
   { nombre: "Goku", imagen: "  https://i.pinimg.com/236x/05/de/10/05de1051bc78dc0092e67d7577a91c87.jpg " },
   { nombre: "Goku", imagen: " https://i.pinimg.com/236x/30/bd/4f/30bd4f9b0b74c268f5b8026da1b7b999.jpg  " },
   { nombre: "Goku", imagen: "  https://i.pinimg.com/236x/94/e6/89/94e689645c7c0c06185c20f4d3d07be1.jpg " },
