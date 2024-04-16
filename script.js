@@ -365,7 +365,13 @@ const personajes = [
 { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/aa/90/93/aa9093d319cc78b02941b7f332659bc0.jpg " },
 { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/b7/72/f4/b772f44b81b9450913ccc2f762a09544.jpg " },
 { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/a2/0c/df/a20cdff7c622998a0dcad055940036da.jpg " },
-{ nombre: "memes meme", imagen: "https://i.pinimg.com/236x/e3/2b/ae/e32bae98ef9b30df3437050405344536.jpg " },
+
+  
+  
+  
+  
+  
+  { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/e3/2b/ae/e32bae98ef9b30df3437050405344536.jpg " },
 { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/f2/ad/47/f2ad47458c055d1f0faddf3e620ad45d.jpg " },
 { nombre: "memes meme", imagen: " https://i.pinimg.com/236x/ac/94/4e/ac944edfc16318a289ba8109fb7ced73.jpg" },
 { nombre: "memes meme", imagen: "https://i.pinimg.com/236x/89/d2/90/89d2901de2c1c83c0e5ec273c7ba5430.jpg " },
