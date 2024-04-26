@@ -600,7 +600,11 @@ var imagenes = [
    { categoria: 'anime', nombre:'https://i.pinimg.com/236x/c7/2f/a6/c72fa61c1213fa01c88fc200715e109c.jpg' },
    { categoria: 'anime', nombre:'https://i.pinimg.com/236x/76/01/28/760128a12e83803c2a2c499736805ae0.jpg' },
    { categoria: 'anime', nombre:'https://i.pinimg.com/236x/de/dc/0d/dedc0d9dd873d8c9e40d46babebc74ab.jpg' },
-   { categoria: 'anime', nombre:'https://i.pinimg.com/236x/9f/3e/54/9f3e542f824b1f81533ef1f84874c725.jpg' },
+   
+  { categoria: 'anime', nombre:'https://i.pinimg.com/236x/9f/3e/54/9f3e542f824b1f81533ef1f84874c725.jpg' },
+
+
+  
    { categoria: 'waifus', nombre: ' https://i.pinimg.com/236x/10/22/e7/1022e75a3f366d64cddda4aac4a5c07e.jpg' },
    { categoria: 'waifus', nombre: 'https://i.pinimg.com/236x/53/7e/6a/537e6a0e7485050c25a71a2f06908cf6.jpg ' },
    { categoria: 'waifus', nombre: ' https://i.pinimg.com/736x/ac/6d/b6/ac6db6b1cf4e528f677966e6263c4b53.jpg' },
@@ -658,6 +662,9 @@ var imagenes = [
    { categoria: 'waifus', nombre: 'https://i.pinimg.com/236x/93/8c/f4/938cf497147e9aa93d086cb929a0da2b.jpg ' },
    { categoria: 'waifus', nombre: ' https://i.pinimg.com/236x/81/fa/e8/81fae889618bab71bcf80f31dc56c6bb.jpg' },
    { categoria: 'waifus', nombre: 'https://i.pinimg.com/236x/11/ce/f8/11cef8eb6a18682d2aede603772a06d9.jpg ' },
+
+
+  
    { categoria: 'vehículos ', nombre: 'https://i.pinimg.com/236x/8e/d2/b3/8ed2b3e0a49900f6b4f1e897883286af.jpg' },
   { categoria: 'vehículos ', nombre: 'https://i.pinimg.com/236x/15/2e/75/152e756d6cc7430e99125d61a694c7f2.jpg ' },
   { categoria: 'vehículos ', nombre: 'https://i.pinimg.com/236x/bb/ae/9c/bbae9ce1ba5e53a4bcfa895939e8aab8.jpg ' },
